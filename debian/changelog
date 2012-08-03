@@ -1,3 +1,9 @@
+apache2 (2.2.22-10blankon1.1) rote; urgency=low
+
+  * rebuild doang :D 
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Fri, 03 Aug 2012 23:24:33 +0700
+
 apache2 (2.2.22-10blankon1) rote; urgency=low
 
   * Merge with debian sid.
