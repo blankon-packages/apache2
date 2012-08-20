@@ -1,14 +1,18 @@
-apache2 (2.2.22-10blankon1.1) rote; urgency=low
+apache2 (2.2.22-11blankon1) rote-updates; urgency=low
 
-  * rebuild doang :D 
+  * Merge whit sid 
 
- -- Rahman Yusri Aftian <aftian@di.blankon.in>  Fri, 03 Aug 2012 23:24:33 +0700
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Mon, 20 Aug 2012 03:19:58 +0000
 
-apache2 (2.2.22-10blankon1) rote; urgency=low
+apache2 (2.2.22-11) unstable; urgency=low
 
-  * Merge with debian sid.
+  * Be more careful regarding link attacks when purging the cache disk
+    directory.
+  * Change file ownership of /var/cache/apache2/ to root.
+  * Compress the data.tar in binary packages using xz to save some space on
+    installation medias (Debian only).
 
- -- Mahyuddin <yudi.al@gmail.com>  Wed, 01 Aug 2012 01:18:01 +0700
+ -- Arno Töll <arno@debian.org>  Fri, 03 Aug 2012 23:20:50 +0200
 
 apache2 (2.2.22-10) unstable; urgency=low
 

@@ -1,7 +1,7 @@
 Source: apache2
 Section: httpd
 Priority: optional
-Maintainer: BlankOn Developers <BlankOn-dev@googlegroups.com>
+Maintainer: BlankOn Developers <blankon-dev@googlegroups.com>
 XSBC-Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
 Uploaders: Stefan Fritsch <sf@debian.org>, Steinar H. Gunderson <sesse@debian.org>, Arno Töll <arno@debian.org>
 Build-Depends: debhelper (>= 8.9.7~), lsb-release, libaprutil1-dev (>= 1.3.4), libapr1-dev, openssl, libpcre3-dev, mawk, zlib1g-dev, libssl-dev (>= 0.9.8m), sharutils, libcap-dev, autoconf, autotools-dev
