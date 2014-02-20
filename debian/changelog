@@ -1,3 +1,56 @@
+apache2 (2.4.7-1blankon0.9.0.1) suroboyo-updates; urgency=low
+
+  * New Upstream release 
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Thu, 20 Feb 2014 11:02:07 +0700
+
+apache2 (2.4.7-1) unstable; urgency=low
+
+  New upstream version
+
+  [ Stefan Fritsch ]
+  * In logrotate and init script, don't hardcode path to htcacheclean.
+    Instead, put sbin directories in PATH. Also fix one missed reference
+    to disk_cache.load, missed in 2.4.6-3. Really closes: #718909
+  * Remove possiblity to override path to apache2 executable via envvars.
+    This is no longer necessary with MPMs as modules.
+  * Fix typo in serve-cgi-bin.conf. Closes: #723196
+  * Bump Build-Depends. 2.4.7 requires apr 1.5.
+
+  [ Arno Töll ]
+  * Fix "No default site enabled after fresh install if /etc/apache2
+    exists" by using a condition in preinst which actually works as expected.
+    Thanks to Jean-Michel Vourgère for triaging the issue and providing a
+    patch (Closes: #711493).
+  * Leave a2disconf with rc=0 when purging a configuration which does not
+    exist. (Closes: #718166)
+  * Explicitly express the dependency for mod_access_compat depending on
+    authn_core. Thanks Jean-Michel Vourgère for providing a patch (Closes:
+    #710412)
+  * Allow "apache2_invoke disconf" in postinst/preinst (Closes: #717693)
+  * Rework the default index.html file. Instead of a blank, minimalistic page
+    give a quick start guide, since nobody seems to read our docs. This site
+    is hopefully explaining the most important questions.
+  * Add a virtual provides line to the itk/worker/event/prefork transitional
+    packages so that people with an unusual (unsupported) Apache setup
+    can upgrade neatless in some corner cases (Closes: #728937)
+  * Drop the Apache ITK patches. The Apache ITK MPM is a standalone package
+    now and will be provided by libapache2-mpm-itk in future. The
+    apache2-mpm-itk package depends on this package from now on. Users of itk
+    are advised to consult the itk manual.
+    This also resolves a build-system problem that caused mod_unixd to be
+    initialized twice. (LP: #1251939)
+  * Remove Steinar H. Gunderson from uploaders, he will continue to support
+    itk in his own package in future. The remaining Apache team thanks Steinar
+    for all the work in the past.
+  * Change the Default Document root directory where files are served from
+    (Closes: #730372).
+  * Add GPG support to our watch file. Thanks to Daniel Kahn Gillmor
+    for this suggestion and for providing a patch (Closes: #732450)
+  * Refresh suexec-custom.patch.
+
+ -- Arno Töll <arno@debian.org>  Thu, 02 Jan 2014 00:17:56 -1100
+
 apache2 (2.4.6-3blankon1) suroboyo; urgency=low
 
   * New Upstream Release

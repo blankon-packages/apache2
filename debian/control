@@ -2,10 +2,10 @@ Source: apache2
 Section: httpd
 Priority: optional
 Maintainer: BlankOn Developers <blankon-dev@googlegroups.com>
-XSBX-Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
-Uploaders: Stefan Fritsch <sf@debian.org>, Steinar H. Gunderson <sesse@debian.org>, Arno Töll <arno@debian.org>
+XSBC-Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Uploaders: Stefan Fritsch <sf@debian.org>, Arno Töll <arno@debian.org>
 Build-Depends: debhelper (>= 8.9.7~), lsb-release, dpkg-dev (>= 1.16.1~),
- libaprutil1-dev (>= 1.5.0), libapr1-dev, libpcre3-dev, zlib1g-dev,
+ libaprutil1-dev (>= 1.5.0), libapr1-dev (>= 1.5.0), libpcre3-dev, zlib1g-dev,
  libssl-dev (>= 0.9.8m), libcap-dev, perl,
  liblua5.1-0-dev, libxml2-dev, autotools-dev, gawk | awk
 Build-Conflicts: autoconf2.13
@@ -71,6 +71,7 @@ Package: apache2-mpm-worker
 Architecture: any
 Section: oldlibs
 Priority: extra
+Provides: httpd, httpd-cgi
 Depends: ${misc:Depends}, apache2 (= ${binary:Version})
 Description: transitional worker MPM package for apache2
  This is a transitional package to apache2 for users of apache2-mpm-worker and
@@ -80,6 +81,7 @@ Package: apache2-mpm-prefork
 Architecture: any
 Section: oldlibs
 Priority: extra
+Provides: httpd, httpd-cgi
 Depends: ${misc:Depends}, apache2 (= ${binary:Version})
 Description: transitional prefork MPM package for apache2
  This is a transitional package to apache2 for users of apache2-mpm-prefork and
@@ -89,6 +91,7 @@ Package: apache2-mpm-event
 Architecture: any
 Section: oldlibs
 Priority: extra
+Provides: httpd, httpd-cgi
 Depends: ${misc:Depends}, apache2 (= ${binary:Version})
 Description: transitional event MPM package for apache2
  This is a transitional package to apache2 for users of apache2-mpm-event and
@@ -98,7 +101,8 @@ Package: apache2-mpm-itk
 Architecture: any
 Section: oldlibs
 Priority: extra
-Depends: ${misc:Depends}, apache2 (= ${binary:Version})
+Provides: httpd, httpd-cgi
+Depends: ${misc:Depends}, apache2 (= ${binary:Version}), libapache2-mpm-itk
 Description: transitional itk MPM package for apache2
  This is a transitional package to apache2 for users of apache2-mpm-itk and
  can be safely removed after the installation is complete.

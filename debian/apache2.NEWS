@@ -20,6 +20,11 @@ apache2 (2.4.1-1) unstable; urgency=low
   a2dismod mpm_worker
   a2enmod mpm_prefork
 
+  MPM ITK users should be advised, that ITK is not a MPM anymore. Instead, it
+  is a simple Apache module, expanding functionality of the prefork MPM. Thus,
+  users should switch to the prefork MPM and enable ITK as a module. The
+  upgrade scripts ensure this for the upgrade from Debian Wheezy.
+
   We did change the security model for Apache in our default configuration. We
   do not allow access to the file system outside /var/www and /usr/share.
   If you are running virtual hosts or scripts outside these directories, you
@@ -28,6 +33,14 @@ apache2 (2.4.1-1) unstable; urgency=low
   your content as recommended by the File Hierarchy Standard (FHS). You must
   allow access to your served directory explicity in the corresponding virtual
   host, or by allowing access in apache2.conf as proposed.
+
+  Along the security model, we did also change the default Document Root, files
+  are served from. Previous releases served /var/www by default when no other
+  virtual host matched the request. Starting with this release, we changed the
+  default document root to /var/www/html, so that sensitive files from other
+  virtual hosts wich are typically put into some directory below /var/www are
+  not exposed by the default virtual host. This change further improves the out
+  of box security.
 
   Moreover, the configuration mechanism in Debian has changed. All
   configurations in sites-enabled and conf-enabled need a ".conf" suffix now.
