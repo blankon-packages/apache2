@@ -77,7 +77,7 @@ clean build build-arch build-indep binary binary-arch binary-indep: %:
 	dh $@ --parallel --with autotools_dev
 
 override_dh_auto_configure: generate-maintainer-scripts prebuild-checks support/suexec-custom.c
-	./configure --enable-layout=BlankOn --enable-so --with-program-name=apache2 \
+	./configure --enable-layout=Debian --enable-so --with-program-name=apache2 \
 		--enable-suexec --with-suexec-caller=www-data \
 		--with-suexec-bin=/usr/lib/apache2/suexec --with-suexec-docroot=/var/www \
 		--with-suexec-userdir=public_html --with-suexec-logfile=/var/log/apache2/suexec.log \
