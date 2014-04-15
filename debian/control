@@ -2,14 +2,14 @@ Source: apache2
 Section: httpd
 Priority: optional
 Maintainer: BlankOn Developers <blankon-dev@googlegroups.com>
-XSBC-Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+XSBC_Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
 Uploaders: Stefan Fritsch <sf@debian.org>, Arno Töll <arno@debian.org>
 Build-Depends: debhelper (>= 8.9.7~), lsb-release, dpkg-dev (>= 1.16.1~),
  libaprutil1-dev (>= 1.5.0), libapr1-dev (>= 1.5.0), libpcre3-dev, zlib1g-dev,
  libssl-dev (>= 0.9.8m), libcap-dev, perl,
  liblua5.1-0-dev, libxml2-dev, autotools-dev, gawk | awk
 Build-Conflicts: autoconf2.13
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-apache/apache2.git
 Vcs-Git: git://anonscm.debian.org/pkg-apache/apache2.git
 Homepage: http://httpd.apache.org/

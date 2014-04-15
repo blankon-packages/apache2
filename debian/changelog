@@ -1,3 +1,41 @@
+apache2 (2.4.9-1blankon1) tambora; urgency=medium
+
+  * Merge Whit Sid 
+
+ -- Aan Yustian <yustian.aan@gmail.com>  Tue, 15 Apr 2014 19:09:53 +0700
+
+apache2 (2.4.9-1) unstable; urgency=medium
+
+  * New upstream version.
+    Security fixes:
+    - CVE-2013-6438: mod_dav: Fix DoS from crafted DAV WRITE requests.
+    - CVE-2014-0098: mod_log_config: Fix segfaults when logging truncated
+                     cookies.
+    Notable new features:
+    - Support named groups and backreferences within the LocationMatch,
+      DirectoryMatch, FilesMatch and ProxyMatch directives.
+    - mod_proxy: Added support for unix domain sockets as the backend server
+      endpoint.
+    - mod_ssl: Add support for OpenSSL configuration commands by introducing
+      the SSLOpenSSLConfCmd directive.
+    - mod_authz_user, mod_authz_host, mod_authz_groupfile, mod_authz_dbm,
+      mod_authz_dbd, mod_authnz_ldap: Support the expression parser within the
+      require directives.
+    - mod_rewrite: Add RewriteOptions InheritDown, InheritDownBefore,
+      and IgnoreInherit.
+    - Bugfix in the build system to avoid problems with patched config.m4
+      files as in LP #1251939.
+  * Make default cipher list in ssl.conf more secure:
+    - Remove 'MEDIUM'. This disables RC4 and SEED. Also remove '!MD5' because
+      'HIGH' does not include MD5.
+    - Remove the 'Speed-optimized SSL Cipher' configuration example because
+      it depends on RC4, which is considered insecure.
+  * Change init script short description to describe the service, not the
+    script.  Closes: #738315
+  * Bump Standards-Version (no changes).
+
+ -- Stefan Fritsch <sf@debian.org>  Sat, 29 Mar 2014 22:50:32 +0100
+
 apache2 (2.4.7-1blankon0.9.0.1) suroboyo-updates; urgency=low
 
   * New Upstream release 
