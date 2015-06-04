@@ -1,3 +1,9 @@
+apache2 (2.4.12-2blankon2) tambora; urgency=medium
+
+  * Resize icon blankon
+
+ -- Syai Mif <syaimif@di.blankon.in>  Thu, 04 Jun 2015 13:19:08 +0700
+
 apache2 (2.4.12-2blankon1) tambora; urgency=medium
 
   * Merge with sid and change icon to BlankOn
